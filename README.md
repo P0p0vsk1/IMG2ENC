@@ -28,10 +28,13 @@ Encryption
 python img2enc.py -f <input_file> -o <output_file> -k <keyfile> -e
 python img2enc.py -f <input_file> -o <output_file> -i <image> -d
 ```
-> <input_file>: The file you want to encrypt.
-> <output_file>: The output file where the encrypted data will be saved.
-> <keyfile>: The .key file generated from your image.
-> <image>: The image you want to use as the key
+> input_file: The file you want to encrypt.
+
+> output_file: The output file where the encrypted data will be saved.
+
+> keyfile: The .key file generated from your image.
+
+> image: The image you want to use as the key
 
 > [!NOTE]
 > You have to use -e/-d switches to set the encryption/decryption mode
