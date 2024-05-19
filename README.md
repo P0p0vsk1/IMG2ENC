@@ -32,7 +32,8 @@ python img2enc.py -f <input_file> -o <output_file> -i <image> -d
 > output_file: The output file where the encrypted data will be saved.<br>
 > keyfile: The .key file generated from your image.<br>
 > image: The image you want to use as the key<br>
-<br><br>
+
+
 > [!NOTE]
 > You have to use -e/-d switches to set the encryption/decryption mode
 
