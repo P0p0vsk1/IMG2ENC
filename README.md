@@ -2,13 +2,15 @@
 
 # <center>Img2Enc: Image-Based Encryption Tool</center>
 
-`Img2Enc` is a Python-based command-line tool that allows users to encrypt and decrypt files using a unique key derived from an image. This tool uses the AES encryption algorithm and offers a user-friendly interface to handle file encryption tasks with ease.
+## Introduction
+`Img2Enc` is a Python-based command-line tool that allows users to encrypt and decrypt files using a unique key derived from an image or the image itself. This tool uses the AES encryption algorithm and offers a user-friendly interface to handle file encryption tasks with ease.
 
 ## Features
+- UnCrackable file encryption
 - Encrypt and decrypt files using AES-256.
 - Generate encryption keys from images.
+- Use either image file or key file to encrypt/decrypt
 - Command-line interface for easy use.
-- Gradient banner display for a visually appealing introduction.
 
 ## Installation
 > [!IMPORTANT]
@@ -32,9 +34,12 @@ python img2enc.py -f <input_file> -o <output_file> -i <image> -d
 > keyfile: The .key file generated from your image.<br>
 > image: The image you want to use as the key<br>
 
-
 > [!NOTE]
 > You have to use -e/-d switches to set the encryption/decryption mode
+
+
+> [!WARNING]
+> Only jpeg/jpg file formats are supported for image-key-file
 
 ### Acknowledgments
 Thanks to the developers of the `pycryptodome`, `pyfiglet`, and `pillow` libraries.
