@@ -116,7 +116,8 @@ def main():
     f = pyfiglet.figlet_format("Img2Enc", "banner3")
     start_color = (255, 0, 0)
     end_color = (0, 0, 255)
-    print(print_gradient(f, start_color, end_color))
+    #print(print_gradient(f, start_color, end_color))
+    print(f)
     # -----
     parser = argparse.ArgumentParser(description='File Encryption/Decryption Tool')
     parser.add_argument('-f', '--file', required=True, help='Input file')
