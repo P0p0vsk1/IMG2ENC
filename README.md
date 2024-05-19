@@ -2,7 +2,6 @@
 
 # <center>Img2Enc: Image-Based Encryption Tool</center>
 
-## Introduction
 `Img2Enc` is a Python-based command-line tool that allows users to encrypt and decrypt files using a unique key derived from an image. This tool uses the AES encryption algorithm and offers a user-friendly interface to handle file encryption tasks with ease.
 
 ## Features
