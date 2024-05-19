@@ -31,8 +31,8 @@ pip install -r requirements.txt
 To use `Img2Enc`, navigate to the directory containing the script and simply run `img2enc.py`:
 
 ```python
-python img2enc.py -f <input_file> -o <output_file> -k <keyfile> -e
-python img2enc.py -f <input_file> -o <output_file> -i <image> -d
+python img2enc.py -f <input_file> -o <output_file> -k <keyfile> -d
+python img2enc.py -f <input_file> -o <output_file> -i <image> -e
 ```
 > input_file: The file you want to encrypt.<br>
 > output_file: The output file where the encrypted data will be saved.<br>
