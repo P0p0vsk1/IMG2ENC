@@ -28,7 +28,7 @@ pip install -r requirements.txt
 ```
 
 ## Usage
-To use `Img2Enc`, navigate to the directory containing the script and run the following commands:
+To use `Img2Enc`, navigate to the directory containing the script and simply run `img2enc.py`:
 
 ```python
 python img2enc.py -f <input_file> -o <output_file> -k <keyfile> -e
