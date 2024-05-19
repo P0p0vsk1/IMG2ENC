@@ -16,7 +16,13 @@
 > [!IMPORTANT]
 > To install Img2Enc, you'll need `Python 3.6` or later.
 
-You can install the required packages using pip:
+Simply clone this repository:
+```bash
+git clone https://github.com/P0p0vsk1/IMG2ENC
+cd IMG2ENC
+```
+
+Then, you can install the required packages using pip:
 ```bash
 pip install -r requirements.txt
 ```
