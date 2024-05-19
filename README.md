@@ -1,4 +1,4 @@
-<center>![Banner](banner.jpg)</center>
+<center>![Banner](https://raw.githubusercontent.com/P0p0vsk1/IMG2ENC/main/banner.jpg)</center>
 
 # <center>Img2Enc: Image-Based Encryption Tool</center>
 
