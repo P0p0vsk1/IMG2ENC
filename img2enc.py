@@ -28,9 +28,9 @@ def generate_keyfile(filename):
     try:
         print(f"[+] Generating keyfile for {filename}")
         img2key.generator(filename)
-        print(f"[+] Keyfile {filename}.key generated successfully")
+        print(f"[+] Keyfile generated")
     except Exception as e:
-        print(f"[-] Error generating keyfile: {e}")
+        print(f"[-] Error generating keyfile")
 
 # Load keyfile
 def load_keyfile(filename):
@@ -41,7 +41,7 @@ def load_keyfile(filename):
         print(f"[-] Keyfile {filename} not found")
         raise
     except Exception as e:
-        print(f"[-] Error loading keyfile: {e}")
+        print(f"[-] Error loading keyfile")
         raise
 
 # Encrypt data
@@ -53,7 +53,7 @@ def encrypt(data, keyfile):
         ciphertext = cipher.encrypt(pad(data, BLOCK_SIZE))
         return salt + cipher.iv + ciphertext
     except Exception as e:
-        print(f"[-] Error encrypting data: {e}")
+        print(f"[-] Error encrypting data")
         raise
 
 # Decrypt data
@@ -67,7 +67,7 @@ def decrypt(encrypted_data, keyfile):
         plaintext = unpad(cipher.decrypt(ciphertext), BLOCK_SIZE)
         return plaintext
     except Exception as e:
-        print(f"[-] Error decrypting data: {e}")
+        print(f"[-] Error decrypting data")
         raise
 
 # Padding for block cipher
@@ -140,14 +140,14 @@ def main():
         try:
             keyfile_data = load_keyfile(args.keyfile)
         except Exception as e:
-            print(f"[-] Error loading keyfile: {e}")
+            print(f"[-] Error loading keyfile")
             raise
     elif args.keyimage:
         generate_keyfile(args.keyimage)
         try:
             keyfile_data = load_keyfile(str(args.keyimage.split(".")[0]) + ".key")
         except Exception as e:
-            print(f"[-] Error loading keyimage: {e}")
+            print(f"[-] Error loading keyimage")
             raise
 
     if args.encrypt:
@@ -165,4 +165,7 @@ def main():
             return
 
 if __name__ == '__main__':
-    main()
+    try:
+        main()
+    except:
+        pass

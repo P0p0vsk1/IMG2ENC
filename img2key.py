@@ -11,23 +11,26 @@ def getRGB(i, pix, size, queue):
     queue.put(out)
 
 def generator(img):
-    im = Image.open(img)
-    pix = im.load()
-    size = im.size
+    try:
+        im = Image.open(img)
+        pix = im.load()
+        size = im.size
 
-    queue = Queue()
-    threads = []
-    num_threads = size[0]
+        queue = Queue()
+        threads = []
+        num_threads = size[0]
 
-    for i in range(num_threads):
-        t = threading.Thread(target=getRGB, args=(i, pix, size, queue))
-        threads.append(t)
-        t.start()
+        for i in range(num_threads):
+            t = threading.Thread(target=getRGB, args=(i, pix, size, queue))
+            threads.append(t)
+            t.start()
 
-    for th in threads:
-        th.join()
+        for th in threads:
+            th.join()
 
-    with open(str(img.split(".")[0]) + ".key", "w") as file:
-        while not queue.empty():
-            out = queue.get()
-            file.write(out)
+        with open(str(img.split(".")[0]) + ".key", "w") as file:
+            while not queue.empty():
+                out = queue.get()
+                file.write(out)
+    except:
+        raise
