@@ -28,9 +28,10 @@ def generate_keyfile(filename):
     try:
         print(f"[+] Generating keyfile for {filename}")
         img2key.generator(filename)
-        print(f"[+] Keyfile {filename} generated successfully")
+        print(f"[+] Keyfile {filename}.key generated successfully")
     except Exception as e:
-        print(f"[-] Error generating keyfile")
+        print(f"[-] Error generating keyfile: {e}")
+        raise
 
 # Load keyfile
 def load_keyfile(filename):
@@ -41,7 +42,7 @@ def load_keyfile(filename):
         print(f"[-] Keyfile {filename} not found")
         raise
     except Exception as e:
-        print(f"[-] Error loading keyfile")
+        print(f"[-] Error loading keyfile: {e}")
         raise
 
 # Encrypt data
@@ -53,7 +54,7 @@ def encrypt(data, keyfile):
         ciphertext = cipher.encrypt(pad(data, BLOCK_SIZE))
         return salt + cipher.iv + ciphertext
     except Exception as e:
-        print(f"[-] Error encrypting data")
+        print(f"[-] Error encrypting data: {e}")
         raise
 
 # Decrypt data
@@ -67,7 +68,7 @@ def decrypt(encrypted_data, keyfile):
         plaintext = unpad(cipher.decrypt(ciphertext), BLOCK_SIZE)
         return plaintext
     except Exception as e:
-        print(f"[-] Error decrypting data")
+        print(f"[-] Error decrypting data: {e}")
         raise
 
 # Padding for block cipher

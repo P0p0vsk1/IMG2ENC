@@ -28,7 +28,7 @@ def generator(img):
         for th in threads:
             th.join()
 
-        with open(str(img.split(".")[0]) + ".key", "w") as file:
+        with open(str(img) + ".key", "w") as file:
             while not queue.empty():
                 out = queue.get()
                 file.write(out)
