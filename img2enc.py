@@ -28,7 +28,7 @@ def generate_keyfile(filename):
     try:
         print(f"[+] Generating keyfile for {filename}")
         img2key.generator(filename)
-        print(f"[+] Keyfile generated")
+        print(f"[+] Keyfile {filename} generated successfully")
     except Exception as e:
         print(f"[-] Error generating keyfile")
 
